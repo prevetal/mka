@@ -31,15 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 
-	// Products slider
-	const productsSliders = [],
-		products = document.querySelectorAll('.products .swiper')
+	// Reviews slider
+	const reviewsSliders = [],
+		reviews = document.querySelectorAll('.reviews .swiper')
 
-	products.forEach((el, i) => {
-		el.classList.add('products_s' + i)
+	reviews.forEach((el, i) => {
+		el.classList.add('reviews_s' + i)
 
 		let options = {
-			loop: false,
+			loop: true,
 			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
@@ -55,37 +55,11 @@ document.addEventListener('DOMContentLoaded', function() {
 				clickable: true,
 				bulletActiveClass: 'active'
 			},
-			breakpoints: {
-				0: {
-					spaceBetween: 12,
-					slidesPerView: 'auto'
-				},
-				480: {
-					spaceBetween: 20,
-					slidesPerView: 2
-				},
-				768: {
-					spaceBetween: 30,
-					slidesPerView: 3
-				},
-				1280: {
-					spaceBetween: 30,
-					slidesPerView: 4
-				}
-			},
-			on: {
-				init: swiper => setHeight(swiper.el.querySelectorAll('.product')),
-				resize: swiper => {
-					let products = swiper.el.querySelectorAll('.product')
-
-					products.forEach(el => el.style.height = 'auto')
-
-					setHeight(products)
-				}
-			}
+			spaceBetween: 24,
+			slidesPerView: 1
 		}
 
-		productsSliders.push(new Swiper('.products_s' + i, options))
+		reviewsSliders.push(new Swiper('.reviews_s' + i, options))
 	})
 
 
@@ -150,11 +124,21 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 
 
-	// 'Up' button
-	$('.buttonUp .btn').click((e) => {
+	// Accordion
+	$('body').on('click', '.accordion .accordion_item .head', function(e) {
 		e.preventDefault()
 
-		$('body, html').stop(false, false).animate({ scrollTop: 0 }, 1000)
+		let item = $(this).closest('.accordion_item'),
+			accordion = $(this).closest('.accordion')
+
+		if (item.hasClass('active')) {
+			item.removeClass('active').find('.data').slideUp(300)
+		} else {
+			accordion.find('.accordion_item').removeClass('active')
+			accordion.find('.data').slideUp(300)
+
+			item.addClass('active').find('.data').slideDown(300)
+		}
 	})
 
 
@@ -167,30 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
 				mask: '+{7} (000) 000-00-00',
 				lazy: true
 			})
-		})
-	}
-
-
-	// Focus when clicking on the field name
-	const formLabels = document.querySelectorAll('form .label')
-
-	if (formLabels) {
-		formLabels.forEach(el => {
-			el.addEventListener('click', e => {
-				e.preventDefault()
-
-				el.closest('.line').querySelector('.input, textarea').focus()
-			})
-		})
-	}
-
-
-	// Select file
-	const fileInputs = document.querySelectorAll('form input[type=file]')
-
-	if (fileInputs) {
-		fileInputs.forEach(el => {
-			el.addEventListener('change', () => el.closest('.file').querySelector('label span').innerText = el.value)
 		})
 	}
 
@@ -227,15 +187,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-window.addEventListener('scroll', function () {
-	// 'Up' button
-	$(window).scrollTop() > $(window).innerHeight()
-		? $('.buttonUp').fadeIn(300)
-		: $('.buttonUp').fadeOut(200)
-})
-
-
-
 window.addEventListener('resize', function () {
 	WH = window.innerHeight || document.clientHeight || BODY.clientHeight
 
@@ -264,3 +215,27 @@ window.addEventListener('resize', function () {
 		}
 	}
 })
+
+
+
+// Map
+function initMap() {
+	ymaps.ready(() => {
+		let myMap = new ymaps.Map('map', {
+			center: [55.755864, 37.617698],
+			zoom: 12,
+			controls: []
+		})
+
+		let myPlacemark = new ymaps.Placemark([55.755864, 37.617698], {}, {
+			iconLayout : 'default#image',
+			iconImageHref : 'images/ic_map_marker.svg',
+			iconImageSize : [22, 29],
+			iconImageOffset : [-11, -29]
+		})
+
+		myMap.geoObjects.add(myPlacemark)
+
+		myMap.behaviors.disable('scrollZoom')
+	})
+}
