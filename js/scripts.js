@@ -155,6 +155,20 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 
+	// Custom select - Nice select
+	const selects = document.querySelectorAll('select')
+
+	if (selects) {
+		selects.forEach(el => {
+			NiceSelect.bind(el, {
+				placeholder: el.getAttribute('data-placeholder')
+			})
+
+			el.addEventListener('change', () => el.classList.add('selected'))
+		})
+	}
+
+
 	if (is_touch_device()) {
 		const subMenus = document.querySelectorAll('header .menu .sub_menu')
 
