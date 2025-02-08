@@ -156,10 +156,9 @@ input[type=number]
 :root
 {
     --bg: #fff;
-    --sidebar_width: 200px;
     --scroll_width: 17px;
     --text_color: #141414;
-    --font_size: 16px;
+    --font_size: 18px;
     --font_size_title: 34px;
     --font_family: 'Gilroy', 'Arial', sans-serif;
 }
@@ -288,49 +287,6 @@ button
 
 
 
-.content_flex.row,
-.content_flex > .cont.row
-{
-    align-content: stretch;
-    align-items: stretch;
-    justify-content: space-between;
-}
-
-
-.content_flex .content
-{
-    position: relative;
-
-    width: calc(100% - var(--sidebar_width) - 40px);
-}
-
-
-.content_flex .content > *:first-child
-{
-    margin-top: 0;
-}
-
-.content_flex .content > *:last-child
-{
-    margin-bottom: 0;
-}
-
-
-
-.block
-{
-    margin-bottom: 60px;
-}
-
-
-
-.modal_btn > *
-{
-    pointer-events: none;
-}
-
-
-
 .overlay
 {
     position: fixed;
@@ -345,49 +301,6 @@ button
 
     opacity: .65;
     background: #000;
-}
-
-
-
-/*--------------
-    Fancybox
---------------*/
-.fancybox__backdrop
-{
-    background: rgba(0, 0, 0, .6);
-}
-
-
-.fancybox__slide
-{
-    padding: 40px;
-}
-
-
-.fancybox__content > .f-button.is-close-btn,
-.is-compact .fancybox__content > .f-button.is-close-btn
-{
-    top: 0;
-    right: 0;
-
-    opacity: 1;
-
-    --f-button-width: 34px;
-    --f-button-height: 34px;
-    --f-button-border-radius: 0;
-    --f-button-color: var(--text_color);
-    --f-button-hover-color: var(--text_color);
-    --f-button-svg-width: 14px;
-    --f-button-svg-height: 14px;
-    --f-button-bg: transparent;
-    --f-button-hover-bg: transparent;
-    --f-button-active-bg: transparent;
-}
-
-
-.fancybox__content > .f-button.is-close-btn svg
-{
-    stroke: none;
 }
 
 
@@ -456,8 +369,7 @@ button
 
 .accordion_item .head .desc
 {
-    font-size: 18px;
-    line-height: 26px;
+    line-height: calc(100% + 8px);
 
     color: #4b4b4b;
 }
@@ -550,7 +462,6 @@ button
 
 .pagination .nice-select .current
 {
-    font-size: 18px;
     line-height: 42px;
 
     display: block;
@@ -610,8 +521,6 @@ button
 
 .pagination .nice-select .list .option
 {
-    font-size: 18px;
-
     display: block;
 
     padding: 8px 11px;
@@ -664,7 +573,6 @@ button
 
 .pagination .links a
 {
-    font-size: 18px;
     line-height: 42px;
 
     display: block;
@@ -807,7 +715,7 @@ header .cont
 header .logo
 {
     font-size: 17px;
-    line-height: 26px;
+    line-height: calc(100% + 9px);
 
     display: flex;
     align-content: center;
@@ -816,6 +724,7 @@ header .logo
     justify-content: flex-start;
 
     margin-top: -30px;
+    margin-right: auto;
     margin-bottom: -48px;
 
     text-decoration: none;
@@ -858,7 +767,7 @@ header .contacts .phone
 {
     font-size: 20px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: calc(100% + 6px);
 
     display: flex;
     align-content: center;
@@ -893,9 +802,8 @@ header .contacts .phone a
 
 header .contacts .time
 {
-    font-size: 18px;
     font-weight: 300;
-    line-height: 21px;
+    line-height: calc(100% + 3px);
 
     display: flex;
     align-content: center;
@@ -935,6 +843,12 @@ header .callback_btn
     border-radius: 25px;
 }
 
+
+
+header .messengers
+{
+    margin-left: auto;
+}
 
 
 header .messengers .phone
@@ -1060,8 +974,7 @@ header .menu_item
 
 header .menu_item > a
 {
-    font-size: 18px;
-    line-height: 26px;
+    line-height: calc(100% + 8px);
 
     position: relative;
 
@@ -1172,8 +1085,7 @@ header .sub_menu > * + *
 
 header .sub_menu a
 {
-    font-size: 18px;
-    line-height: 24px;
+    line-height: calc(100% + 6px);
 
     display: block;
 
@@ -1198,46 +1110,6 @@ header .sub_menu a.active
 
 
 
-header.fixed
-{
-    position: fixed;
-
-    margin: 0;
-
-    -webkit-animation: moveDown .5s;
-            animation: moveDown .5s;
-}
-
-
-@-webkit-keyframes moveDown
-{
-    0%
-    {
-        -webkit-transform: translateY(-100%);
-                transform: translateY(-100%);
-    }
-}
-
-@-moz-keyframes moveDown
-{
-    0%
-    {
-        -webkit-transform: translateY(-100%);
-                transform: translateY(-100%);
-    }
-}
-
-@keyframes moveDown
-{
-    0%
-    {
-        -webkit-transform: translateY(-100%);
-                transform: translateY(-100%);
-    }
-}
-
-
-
 /*-----------------
     Mob. header
 -----------------*/
@@ -1251,7 +1123,17 @@ header.fixed
     display: none;
 
     width: 100%;
-    padding: 16px 0;
+
+    color: #fff;
+    background: #232933;
+}
+
+
+.mob_header.absolute
+{
+    position: absolute;
+
+    background: rgba(0, 7, 21, .45);
 }
 
 
@@ -1266,11 +1148,19 @@ header.fixed
 
 .mob_header .logo
 {
-    display: block;
+    font-size: 14px;
+    line-height: calc(100% + 8px);
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
     margin-right: auto;
 
     text-decoration: none;
+    text-transform: uppercase;
 
     color: currentColor;
 }
@@ -1279,6 +1169,41 @@ header.fixed
 .mob_header .logo img
 {
     display: block;
+
+    width: 100px;
+    height: 100px;
+    margin-left: -12px;
+}
+
+
+
+.mob_header .langs .btn
+{
+    font-weight: 300;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    height: 28px;
+    padding: 0 11px 0 7px;
+
+    color: #c1c5cf;
+    border: 1px solid #373a4a;
+    border-radius: 3px;
+
+    gap: 8px;
+}
+
+
+.mob_header .langs .btn .icon
+{
+    display: block;
+
+    width: 8px;
+    height: 8px;
 }
 
 
@@ -1292,7 +1217,7 @@ header.fixed
     justify-content: center;
 
     width: 44px;
-    height: 34px;
+    height: 40px;
     margin-right: -8px;
     margin-left: 24px;
     padding: 8px;
@@ -1310,6 +1235,7 @@ header.fixed
     width: 100%;
     height: 2px;
 
+    border-radius: 3px;
     background: currentColor;
 }
 
@@ -1328,6 +1254,7 @@ header.fixed
 
     content: '';
 
+    border-radius: 3px;
     background: currentColor;
 }
 
@@ -1335,19 +1262,6 @@ header.fixed
 .mob_header .mob_menu_btn span:after
 {
     top: 8px;
-}
-
-
-
-/*-------------
-    Sidebar
--------------*/
-aside
-{
-    position: relative;
-
-    width: var(--sidebar_width);
-    max-width: 100%;
 }
 
 
@@ -1746,8 +1660,7 @@ aside
 ----------------*/
 .text_block
 {
-    font-size: 18px;
-    line-height: 24px;
+    line-height: calc(100% + 6px);
 }
 
 
@@ -2091,8 +2004,7 @@ aside
 
 .first_section .action .btn
 {
-    font-size: 18px;
-    line-height: 28px;
+    line-height: calc(100% + 10px);
 
     position: relative;
 
@@ -2150,7 +2062,7 @@ aside
 .first_section .phone .label
 {
     font-size: 21px;
-    line-height: 26px;
+    line-height: calc(100% + 5px);
 
     margin-bottom: 8px;
 
@@ -2230,6 +2142,7 @@ aside
     flex-wrap: nowrap;
     justify-content: space-between;
 
+    min-height: 39px;
     margin-bottom: 24px;
 
     color: #0c0c0c;
@@ -2263,8 +2176,6 @@ aside
 
 .services .items a
 {
-    font-size: 18px;
-
     position: relative;
 
     display: block;
@@ -2391,7 +2302,6 @@ aside
 
 .free_consult .head .desc
 {
-    font-size: 18px;
     line-height: calc(100% + 10px);
 
     margin-top: 12px;
@@ -2474,7 +2384,7 @@ aside
 .free_consult .contacts .label
 {
     font-size: 21px;
-    line-height: 26px;
+    line-height: calc(100% + 5px);
 
     width: 100%;
     margin-top: 12px;
@@ -2605,14 +2515,14 @@ aside
 {
     font-size: 34px;
     font-weight: 700;
-    line-height: 38px;
+    line-height: calc(100% + 4px);
 }
 
 
 .free_consult .now .desc
 {
     font-size: 21px;
-    line-height: 28px;
+    line-height: calc(100% + 7px);
 
     margin-top: 24px;
 }
@@ -2620,8 +2530,7 @@ aside
 
 .free_consult .now .btn
 {
-    font-size: 18px;
-    line-height: 28px;
+    line-height: calc(100% + 10px);
 
     position: relative;
 
@@ -2688,7 +2597,7 @@ aside
     display: block;
 
     width: 563px;
-    width: 531px;
+    height: 531px;
 
     pointer-events: none;
 }
@@ -2772,7 +2681,7 @@ aside
 {
     font-size: 21px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: calc(100% + 5px);
 
     color: #051936;
 }
@@ -2780,8 +2689,7 @@ aside
 
 .problems .item .desc
 {
-    font-size: 18px;
-    line-height: 26px;
+    line-height: calc(100% + 8px);
 }
 
 
@@ -2825,8 +2733,7 @@ aside
 
 .stats .item
 {
-    font-size: 18px;
-    line-height: 28px;
+    line-height: calc(100% + 10px);
 
     position: relative;
 
@@ -2963,8 +2870,7 @@ aside
 
 .for_individuals .item
 {
-    font-size: 18px;
-    line-height: 26px;
+    line-height: calc(100% + 8px);
 
     display: flex;
     flex-direction: column;
@@ -2983,8 +2889,7 @@ aside
 
 .for_individuals .urgent
 {
-    font-size: 18px;
-    line-height: 26px;
+    line-height: calc(100% + 8px);
 
     display: flex;
     flex-direction: column;
@@ -3012,9 +2917,9 @@ aside
 
 
 
-/*---------------------
+/*------------------------
     For legal entities
----------------------*/
+------------------------*/
 .for_legal_entities
 {
     position: relative;
@@ -3063,8 +2968,7 @@ aside
 
 .for_legal_entities .item
 {
-    font-size: 18px;
-    line-height: 26px;
+    line-height: calc(100% + 8px);
 
     display: flex;
     flex-direction: column;
@@ -3130,8 +3034,7 @@ aside
 
 .trust .bottom
 {
-    font-size: 18px;
-    line-height: 26px;
+    line-height: calc(100% + 8px);
 
     width: 100%;
     margin-top: 60px;
@@ -3276,9 +3179,8 @@ aside
 
 .reviews .review .author .name
 {
-    font-size: 18px;
     font-weight: 700;
-    line-height: 22px;
+    line-height: calc(100% + 4px);
 }
 
 
@@ -3292,8 +3194,7 @@ aside
 
 .reviews .review .text
 {
-    font-size: 18px;
-    line-height: 28px;
+    line-height: calc(100% + 10px);
 }
 
 
@@ -3307,7 +3208,7 @@ aside
 {
     font-size: 17px;
     font-weight: 300;
-    line-height: 23px;
+    line-height: calc(100% + 6px);
 
     padding: 12px 33px;
 
@@ -3360,9 +3261,8 @@ aside
 
 .contacts_info .address .label
 {
-    font-size: 18px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: calc(100% + 8px);
 
     margin-bottom: 20px;
 }
@@ -3370,15 +3270,13 @@ aside
 
 .contacts_info .address .val
 {
-    font-size: 18px;
-    line-height: 30px;
+    line-height: calc(100% + 12px);
 }
 
 
 .contacts_info .time
 {
-    font-size: 18px;
-    line-height: 30px;
+    line-height: calc(100% + 12px);
 
     margin-top: 20px;
 }
@@ -3496,7 +3394,7 @@ aside
 {
     font-size: 17px;
     font-weight: 300;
-    line-height: 23px;
+    line-height: calc(100% + 6px);
 
     display: inline-block;
 
@@ -3551,8 +3449,7 @@ aside
 .vacancies
 {
     margin-bottom: 80px;
-    padding-top: 52px;
-    padding-bottom: 104px;
+    padding: 52px 0 104px;
 
     background: #f1f2f3;
 }
@@ -3732,8 +3629,7 @@ aside
 
 .advantages .item .desc
 {
-    font-size: 18px;
-    line-height: 24px;
+    line-height: calc(100% + 6px);
 
     color: #4b4b4b;
 }
@@ -3744,7 +3640,7 @@ aside
 {
     font-size: 24px;
     font-weight: 700;
-    line-height: 36px;
+    line-height: calc(100% + 12px);
 
     position: relative;
 
@@ -3969,9 +3865,8 @@ aside
 
 .for_partners .item .name
 {
-    font-size: 18px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: calc(100% + 8px);
 
     text-transform: uppercase;
 
@@ -3984,7 +3879,7 @@ aside
 {
     font-size: 24px;
     font-weight: 700;
-    line-height: 36px;
+    line-height: calc(100% + 12px);
 
     position: relative;
 
@@ -4024,7 +3919,7 @@ aside
 {
     font-size: 21px;
     font-weight: 500;
-    line-height: 24px;
+    line-height: calc(100% + 3px);
 
     margin-top: 16px;
 
@@ -4052,6 +3947,7 @@ aside
 
     display: block;
 
+    width: 418px;
     margin-left: 260px;
 
     pointer-events: none;
@@ -4158,9 +4054,8 @@ aside
 
 .work_order .item .name
 {
-    font-size: 18px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: calc(100% + 8px);
 
     margin-bottom: 8px;
 
@@ -4211,7 +4106,7 @@ aside
 {
     font-size: 24px;
     font-weight: 700;
-    line-height: 36px;
+    line-height: calc(100% + 12px);
 
     position: relative;
 
@@ -4245,9 +4140,9 @@ aside
 
 .work_order .contacts .exp
 {
-    font-size: 18px;
+    font-size: var(--font_size);
     font-weight: 500;
-    line-height: 24px;
+    line-height: calc(100% + 6px);
 
     margin-top: 16px;
 
@@ -4264,6 +4159,8 @@ aside
     bottom: 0;
 
     display: block;
+
+    width: 418px;
 
     pointer-events: none;
 }
@@ -4366,8 +4263,6 @@ aside
 
 .price_list .items > *
 {
-    font-size: 18px;
-
     display: flex;
     align-content: flex-start;
     align-items: flex-start;
@@ -4431,7 +4326,7 @@ aside
 {
     font-size: 24px;
     font-weight: 700;
-    line-height: 36px;
+    line-height: calc(100% + 12px);
 
     position: relative;
 
@@ -4546,9 +4441,8 @@ aside
 
 .advantages_college .item .name
 {
-    font-size: 18px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: calc(100% + 8px);
 
     text-transform: uppercase;
 }
@@ -4556,8 +4450,7 @@ aside
 
 .advantages_college .item .desc
 {
-    font-size: 18px;
-    line-height: 23px;
+    line-height: calc(100% + 5px);
 
     margin-top: 8px;
 }
@@ -4628,9 +4521,8 @@ aside
 
 .lawyers .person .photo + *
 {
-    font-size: 18px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: calc(100% + 8px);
 
     display: flex;
     flex-direction: column;
@@ -4684,7 +4576,7 @@ aside
 {
     font-size: 17px;
     font-weight: 300;
-    line-height: 23px;
+    line-height: calc(100% + 6px);
 
     display: inline-block;
 
@@ -4721,8 +4613,6 @@ footer .cont
 
 footer .menu
 {
-    font-size: 18px;
-
     width: 848px;
     max-width: 100%;
 
@@ -4766,7 +4656,7 @@ footer .contacts .phone
 {
     font-size: 24px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: calc(100% + 2px);
 
     display: flex;
     align-content: center;
@@ -4865,9 +4755,8 @@ footer .contacts .time .icon
 
 footer .callback_btn
 {
-    font-size: 18px;
     font-weight: 300;
-    line-height: 22px;
+    line-height: calc(100% + 4px);
 
     height: 56px;
     padding: 0 34px;
@@ -4893,7 +4782,7 @@ footer .line
 footer .copyright
 {
     font-weight: 300;
-    line-height: 21px;
+    line-height: calc(100% + 3px);
 
     width: 100%;
     margin-top: 20px;
@@ -4908,7 +4797,7 @@ footer .copyright
 footer .exp
 {
     font-weight: 300;
-    line-height: 21px;
+    line-height: calc(100% + 3px);
 
     width: 100%;
     margin-top: 8px;
@@ -4919,41 +4808,4 @@ footer .exp
     color: #a6a5a3;
 
     text-decoration-thickness: 1px;
-}
-
-
-
-/*-----------
-    PopUp
------------*/
-.modal
-{
-    display: none;
-    visibility: visible !important;
-
-    width: 480px;
-    max-width: 100%;
-    padding: 40px 50px;
-
-    color: var(--text_color);
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-}
-
-
-.modal_title
-{
-    font-size: var(--font_size_title);
-    font-weight: 700;
-    line-height: normal;
-
-    text-align: center;
-}
-
-
-.modal_desc
-{
-    margin-top: 24px;
-
-    text-align: center;
 }

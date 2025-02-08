@@ -29,10 +29,11 @@
 		<link rel="preload" href="css/fancybox.css" as="style" onload="this.rel='stylesheet'">
 		<link rel="preload" href="css/styles.css" as="style" onload="this.rel='stylesheet'">
 
-		<link rel="stylesheet" href="css/response_1279.css" media="print, (max-width: 1279px)">
-		<link rel="stylesheet" href="css/response_1023.css" media="print, (max-width: 1023px)">
-		<link rel="stylesheet" href="css/response_767.css" media="print, (max-width: 767px)">
-		<link rel="stylesheet" href="css/response_479.css" media="(max-width: 479px)">
+		<link rel="preload" href="css/response_1439.css" media="print, (max-width: 1439px)" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="css/response_1279.css" media="print, (max-width: 1279px)" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="css/response_1023.css" media="print, (max-width: 1023px)" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="css/response_767.css" media="print, (max-width: 767px)" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="css/response_479.css" media="(max-width: 479px)" as="style" onload="this.rel='stylesheet'">
 	</head>
 
 	<body>
@@ -155,8 +156,20 @@
 
 				<section class="mob_header">
 					<div class="cont row">
-						<div class="logo">
+						<a href="/" class="logo">
 							<img src="images/logo.svg" alt="">
+							<span>МКА "Межрегиональная<br> Адвокатская Служба"</span>
+						</a>
+
+						<div class="langs modal_cont">
+							<button class="btn mini_modal_btn" data-modal-id="#langs_modal">
+								<span>Ру</span>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+							</button>
+
+							<div class="mini_modal" id="langs_modal">
+
+							</div>
 						</div>
 
 						<button class="mob_menu_btn">
@@ -566,25 +579,23 @@
 							<div class="title">Форма оплаты услуг адвоката</div>
 
 							<div class="text_block">
-								<div class="text_block">
-									<p><b>Фиксированная оплата услуг адвоката</b></p>
+								<p><b>Фиксированная оплата услуг адвоката</b></p>
 
-									<p>Фиксированная форма оплата услуг адвоката – это основная форма расчета между доверителем и юристом. Доверитель единовременно оплачивает юридическую помощь. Как правило, подобная форма оплаты избирается при возможности прогнозирования необходимого объема работ, а также времени, необходимого на выполнение поставленных юридических задач.</p>
-								</div>
+								<p>Фиксированная форма оплата услуг адвоката – это основная форма расчета между доверителем и юристом. Доверитель единовременно оплачивает юридическую помощь. Как правило, подобная форма оплаты избирается при возможности прогнозирования необходимого объема работ, а также времени, необходимого на выполнение поставленных юридических задач.</p>
+							</div>
 
-								<div class="text_block">
-									<p><b>Оплата за период</b></p>
+							<div class="text_block">
+								<p><b>Оплата за период</b></p>
 
-									<p>Данная форма оплаты подразумевает оплату Доверителем определенного временного промежутка работы адвоката. Чаще всего в коллегии адвокатов применяется оплата календарного месяца работы по делу. При данной форме оплаты адвокат выполняет все необходимые процессуальные и иные действия, направленные на разрешение юридического вопроса Доверителя.</p>
+								<p>Данная форма оплаты подразумевает оплату Доверителем определенного временного промежутка работы адвоката. Чаще всего в коллегии адвокатов применяется оплата календарного месяца работы по делу. При данной форме оплаты адвокат выполняет все необходимые процессуальные и иные действия, направленные на разрешение юридического вопроса Доверителя.</p>
 
-									<p>Данная форма стоимости услуг адвоката не предполагает каких–либо дополнительных материальных затрат со стороны Доверителя даже в случае выполнения адвокатом не запланировнно большого объема работ по делу.</p>
-								</div>
+								<p>Данная форма стоимости услуг адвоката не предполагает каких–либо дополнительных материальных затрат со стороны Доверителя даже в случае выполнения адвокатом не запланировнно большого объема работ по делу.</p>
+							</div>
 
-								<div class="text_block">
-									<p><b>Оплата услуг адвоката за судебное заседание</b></p>
+							<div class="text_block">
+								<p><b>Оплата услуг адвоката за судебное заседание</b></p>
 
-									<p>Оплата услуг адвоката за судебное заседание все больше набирает популярность. Такая форма оплаты предусматривает возможность временного приостановления платежей в ряде случаев, например, при назначении и проведении по делу длительных судебных экспертиз и т.п. В стоимость входит не только участие адвоката в судебном заседании, но и подготовка к нему.</p>
-								</div>
+								<p>Оплата услуг адвоката за судебное заседание все больше набирает популярность. Такая форма оплаты предусматривает возможность временного приостановления платежей в ряде случаев, например, при назначении и проведении по делу длительных судебных экспертиз и т.п. В стоимость входит не только участие адвоката в судебном заседании, но и подготовка к нему.</p>
 							</div>
 						</div>
 
@@ -717,8 +728,17 @@
 		<script src="js/jquery-3.6.3.min.js"></script>
 		<script src="js/functions.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
-		<script src="js/fancybox.js"></script>
 		<script src="js/imask.js"></script>
+		<script src="js/nice-select2.js"></script>
 		<script src="js/scripts.js"></script>
+
+		<!-- Яндекс карты -->
+		<script src="http://api-maps.yandex.ru/2.1.75/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				// Map
+				initMap()
+			})
+		</script>
 	</body>
 </html>

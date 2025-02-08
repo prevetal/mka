@@ -1,0 +1,1135 @@
+@media print,
+(max-width: 1439px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size: 16px;
+        --font_size_title: 30px;
+    }
+
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction
+    {
+        bottom: -28px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item + .accordion_item
+    {
+        margin-top: 16px;
+    }
+
+
+    .accordion_item .head .title
+    {
+        font-size: 18px;
+    }
+
+
+    .accordion_item .head .arr
+    {
+        top: 24px;
+        right: 26px;
+    }
+
+
+    .accordion_item .data
+    {
+        padding: 0 24px 40px;
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination .limit
+    {
+        width: 320px;
+    }
+
+
+    .pagination .links
+    {
+        gap: 4px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header .logo
+    {
+        font-size: var(--font_size);
+        line-height: calc(100% + 8px);
+
+        margin-top: -28px;
+        margin-bottom: -50px;
+    }
+
+
+    header .logo img
+    {
+        width: 148px;
+        height: 148px;
+        margin-left: -16px;
+    }
+
+
+    header .logo span
+    {
+        margin-bottom: 28px;
+    }
+
+
+
+    header .contacts .phone
+    {
+        font-size: 18px;
+    }
+
+
+
+    header .callback_btn
+    {
+        font-size: var(--font_size);
+        line-height: calc(100% + 4px);
+
+        height: 48px;
+        padding: 0 19px;
+    }
+
+
+
+    header .messengers .phone
+    {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+
+    header .messengers .items
+    {
+        margin-top: 8px;
+
+        gap: 16px;
+    }
+
+
+    header .messengers .items img
+    {
+        width: 32px;
+        height: 32px;
+    }
+
+
+
+    header .langs
+    {
+        margin-left: 20px;
+    }
+
+
+    header .langs .btn
+    {
+        height: 30px;
+    }
+
+
+
+    header .menu
+    {
+        padding-left: 134px;
+
+        gap: 68px;
+    }
+
+
+    header .menu_item > a
+    {
+        height: 48px;
+    }
+
+
+    header .sub_menu
+    {
+        width: 280px;
+        padding: 12px 24px;
+    }
+
+
+    header .sub_menu a
+    {
+        line-height: calc(100% + 4px);
+
+        padding: 12px 0;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head .desc
+    {
+        font-size: 18px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block ul li:before
+    {
+        top: 9px;
+    }
+
+
+    .text_block ol li
+    {
+        padding-left: 28px;
+    }
+
+
+    .text_block .download_link
+    {
+        font-size: 13px;
+
+        margin: -2px 6px;
+        padding: 6px 12px;
+    }
+
+
+    .text_block small
+    {
+        font-size: 15px;
+    }
+
+
+    .text_block .image
+    {
+        margin-bottom: 60px;
+    }
+
+
+    .text_block .image img:not(.stamp)
+    {
+        width: calc(50% - 12px);
+    }
+
+
+    .text_block .image > div
+    {
+        width: calc(50% - 12px);
+    }
+
+
+    .text_block .image img.stamp
+    {
+        top: 4px;
+        right: 0;
+        left: auto;
+
+        width: 520px;
+        max-width: calc(50% - 60px);
+        height: auto;
+        margin-left: 0;
+    }
+
+
+    .text_block .message
+    {
+        padding: 24px 48px;
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section
+    {
+        margin-bottom: 80px;
+    }
+
+
+    .first_section .cont
+    {
+        min-height: 748px;
+        padding-top: 240px;
+    }
+
+
+    .first_section .data
+    {
+        width: 652px;
+    }
+
+
+    .first_section .pre_title
+    {
+        font-size: 20px;
+    }
+
+
+    .first_section .title
+    {
+        font-size: 52px;
+    }
+
+
+    .first_section .sub_title
+    {
+        font-size: 24px;
+    }
+
+
+    .first_section .action
+    {
+        padding: 31px;
+    }
+
+
+    .first_section .action .btn
+    {
+        width: 280px;
+    }
+
+
+    .first_section .action .btn span
+    {
+        height: 60px;
+    }
+
+
+    .first_section .phone .label
+    {
+        font-size: 20px;
+    }
+
+
+    .first_section .phone .val
+    {
+        font-size: 32px;
+    }
+
+
+    .first_section .photo
+    {
+        right: 24px;
+        left: auto;
+
+        width: 532px;
+        margin-left: 0;
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services
+    {
+        padding-bottom: 124px;
+    }
+
+
+    .services .col
+    {
+        width: calc(50% - 12px);
+    }
+
+
+    .services .title
+    {
+        font-size: 24px;
+    }
+
+
+    .services .bg
+    {
+        width: 600px;
+    }
+
+
+
+    /*------------------
+        Free consult
+    ------------------*/
+    .free_consult .head
+    {
+        min-height: 240px;
+        margin-left: 112px;
+        padding: 40px 80px 40px 160px;
+    }
+
+
+    .free_consult .head .title
+    {
+        font-size: 24px;
+        line-height: calc(100% + 12px);
+    }
+
+
+    .free_consult .head .desc
+    {
+        line-height: calc(100% + 8px);
+
+        margin-top: 16px;
+    }
+
+
+    .free_consult .head .img
+    {
+        bottom: -16px;
+        left: -112px;
+
+        width: 212px;
+        height: auto;
+    }
+
+
+    .free_consult .contacts
+    {
+        margin-top: 60px;
+        padding: 31px;
+    }
+
+
+    .free_consult .contacts .title
+    {
+        font-size: 30px;
+    }
+
+
+    .free_consult .contacts .label
+    {
+        font-size: 18px;
+        line-height: calc(100% + 4px);
+    }
+
+
+    .free_consult .contacts .messengers
+    {
+        gap: 20px;
+    }
+
+
+    .free_consult .contacts .messengers img
+    {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .free_consult .contacts .phone
+    {
+        font-size: 30px;
+
+        margin-left: 20px;
+    }
+
+
+    .free_consult .contacts .bg
+    {
+        width: 116px;
+        height: auto;
+    }
+
+
+    .free_consult .now
+    {
+        margin-top: 64px;
+    }
+
+
+    .free_consult .now .image
+    {
+        width: calc(50% - 12px);
+    }
+
+
+    .free_consult .now .title
+    {
+        font-size: 30px;
+    }
+
+
+    .free_consult .now .desc
+    {
+        font-size: 18px;
+    }
+
+
+    .free_consult .now .btn
+    {
+        width: 280px;
+        margin-top: 60px;
+    }
+
+
+    .free_consult .now .btn span
+    {
+        height: 60px;
+    }
+
+
+    .free_consult .now .img
+    {
+        right: 0;
+        left: auto;
+
+        max-width: calc(100% - 48px);
+        height: auto;
+    }
+
+
+    .free_consult > .bg
+    {
+        top: 80px;
+
+        height: 512px;
+    }
+
+
+
+    /*--------------
+        Problems
+    --------------*/
+    .problems .row
+    {
+        gap: 24px;
+    }
+
+
+    .problems .row > *
+    {
+        width: calc(50% - 12px);
+    }
+
+
+    .problems .item
+    {
+        padding: 12px;
+    }
+
+
+    .problems .item .thumb
+    {
+        width: 160px;
+        height: 132px;
+    }
+
+
+    .problems .item .thumb + div
+    {
+        width: calc(100% - 184px);
+    }
+
+
+    .problems .item .name
+    {
+        font-size: 20px;
+    }
+
+
+
+    /*-----------
+        Stats
+    -----------*/
+    .stats
+    {
+        margin-bottom: 80px;
+        padding: 68px 0 80px;
+    }
+
+
+    .stats .row
+    {
+        margin-bottom: -24px;
+        margin-left: -24px;
+    }
+
+
+    .stats .row > *
+    {
+        width: calc(25% - 24px);
+        margin-bottom: 24px;
+        margin-left: 24px;
+    }
+
+
+    .stats .item
+    {
+        padding: 24px 24px 24px 48px;
+    }
+
+
+    .stats .item .val
+    {
+        font-size: 40px;
+    }
+
+
+    .stats .item .val:after
+    {
+        width: 28px;
+    }
+
+
+
+    /*---------------------
+        For individuals
+    ---------------------*/
+    .for_individuals
+    {
+        margin-bottom: 80px;
+    }
+
+
+    .for_individuals .col
+    {
+        width: calc(50% - 24px);
+
+        gap: 28px;
+    }
+
+
+    .for_individuals .urgent
+    {
+        width: 480px;
+        margin-top: 60px;
+        padding: 19px;
+    }
+
+
+
+    /*---------------------
+        For legal entities
+    ---------------------*/
+    .for_legal_entities
+    {
+        margin-bottom: 80px;
+        padding: 68px 0 80px;
+    }
+
+
+    .for_legal_entities .col
+    {
+        width: calc(50% - 24px);
+
+        gap: 28px;
+    }
+
+
+
+    /*-----------
+        Trust
+    -----------*/
+    .trust
+    {
+        margin-bottom: 80px;
+    }
+
+
+    .trust .image
+    {
+        width: calc(50% - 24px);
+    }
+
+
+    .trust .data
+    {
+        width: calc(50% - 24px);
+    }
+
+
+    .trust .bottom
+    {
+        padding: 40px 80px;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews
+    {
+        margin-bottom: 80px;
+    }
+
+
+    .reviews .swiper
+    {
+        padding: 0 48px;
+    }
+
+
+    .reviews .review .image
+    {
+        width: 324px;
+        height: 449px;
+    }
+
+
+    .reviews .review .image + *
+    {
+        width: calc(100% - 364px);
+        padding-top: 16px;
+    }
+
+
+    .reviews .review .author .photo
+    {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .reviews .review .author .photo + *
+    {
+        width: calc(100% - 76px);
+    }
+
+
+    .reviews .review .video
+    {
+        margin-top: 40px;
+    }
+
+
+    .reviews .review .video .btn
+    {
+        font-size: var(--font_size);
+
+        padding: 11px 27px;
+    }
+
+
+
+    /*----------------
+        Work order
+    ----------------*/
+    .work_order
+    {
+        padding: 48px 0 80px;
+    }
+
+
+
+    .work_order .contacts
+    {
+        font-size: 20px;
+
+        margin-top: 100px;
+        padding: 24px 500px 24px 80px;
+    }
+
+
+    .work_order .contacts .phone
+    {
+        font-size: var(--font_size_title);
+        line-height: calc(100% + 16px);
+    }
+
+
+    .work_order .contacts .exp br
+    {
+        display: none;
+    }
+
+
+
+    /*---------------
+        Vacancies
+    ---------------*/
+    .vacancies
+    {
+        padding: 48px 0 80px;
+    }
+
+
+    .vacancies .section
+    {
+        padding-top: 28px;
+        padding-left: 48px;
+    }
+
+
+    .vacancies .section + .section
+    {
+        margin-top: 28px;
+    }
+
+
+    .vacancies .section .title
+    {
+        font-size: 20px;
+    }
+
+
+    .vacancies .contacts
+    {
+        font-size: 20px;
+        line-height: calc(100% + 10px);
+
+        width: 684px;
+        margin-top: 40px;
+    }
+
+
+    .vacancies .contacts a.phone_link
+    {
+        font-size: 24px;
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages
+    {
+        margin-bottom: 80px;
+    }
+
+
+    .advantages .item .name
+    {
+        font-size: 20px;
+    }
+
+
+    .advantages .contacts
+    {
+        font-size: 20px;
+
+        margin-top: 100px;
+        padding: 24px 424px 24px 24px;
+    }
+
+
+    .advantages .contacts a
+    {
+        font-size: var(--font_size_title);
+        line-height: calc(100% + 16px);
+    }
+
+
+    .advantages .contacts img
+    {
+        bottom: -28px;
+
+        width: 400px;
+        height: auto;
+    }
+
+
+
+    /*----------------
+        Price list
+    ----------------*/
+    .price_list
+    {
+        padding: 48px 0 80px;
+    }
+
+
+    .price_list .section .sub_title
+    {
+        font-size: 24px;
+    }
+
+
+    .price_list .section .desc
+    {
+        font-size: 18px;
+    }
+
+
+    .price_list .items
+    {
+        margin-top: 24px;
+    }
+
+
+    .price_list .items > *
+    {
+        padding: 12px 28px;
+    }
+
+
+    .price_list .payment_info
+    {
+        margin-top: 60px;
+    }
+
+
+    .price_list .exp
+    {
+        font-size: 22px;
+
+        margin-top: 140px;
+        padding: 40px 500px 40px 120px;
+    }
+
+
+    .price_list .exp .img
+    {
+        right: -40px;
+        bottom: -52px;
+
+        width: 480px;
+        height: auto;
+    }
+
+
+
+    /*-------------
+        Lawyers
+    -------------*/
+    .lawyers
+    {
+        padding: 48px 0 80px;
+    }
+
+
+    .lawyers .person
+    {
+        padding-bottom: 31px;
+    }
+
+
+    .lawyers .person .photo
+    {
+        width: 160px;
+        height: 160px;
+    }
+
+
+    .lawyers .person .photo + *
+    {
+        width: calc(100% - 200px);
+
+        gap: 8px;
+    }
+
+
+    .lawyers .person .link a
+    {
+        font-size: var(--font_size);
+
+        padding: 11px 23px;
+    }
+
+
+
+    /*------------------
+        For partners
+    ------------------*/
+    .for_partners
+    {
+        padding: 48px 0 80px;
+    }
+
+
+    .for_partners .list
+    {
+        gap: 24px;
+    }
+
+
+    .for_partners .contacts
+    {
+        font-size: 20px;
+
+        padding-right: 400px;
+    }
+
+
+    .for_partners .contacts .phone
+    {
+        font-size: var(--font_size_title);
+        line-height: calc(100% + 16px);
+    }
+
+
+    .for_partners .contacts .email
+    {
+        font-size: 18px;
+    }
+
+
+    .for_partners .contacts .img
+    {
+        bottom: -48px;
+
+        width: 360px;
+        margin-left: 240px;
+    }
+
+
+
+    /*------------------------
+        Advantages college
+    ------------------------*/
+    .advantages_college
+    {
+        padding: 48px 0 80px;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info
+    {
+        padding: 48px 0 80px;
+    }
+
+
+    .about_info .list
+    {
+        gap: 24px;
+    }
+
+
+    .about_info .item
+    {
+        padding: 8px 24px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info
+    {
+        padding: 52px 0;
+    }
+
+
+    .contacts_info .title
+    {
+        line-height: calc(100% + 16px);
+    }
+
+
+    .contacts_info .messengers .items
+    {
+        gap: 12px;
+    }
+
+
+    .contacts_info .phone
+    {
+        font-size: 24px;
+    }
+
+
+    .contacts_info .email
+    {
+        font-size: var(--font_size);
+        line-height: calc(100% + 10px);
+
+        margin-top: 20px;
+    }
+
+
+    .contacts_info .email .icon
+    {
+        margin: 5px 0;
+    }
+
+
+    .contacts_info .branches
+    {
+        margin-top: 24px;
+    }
+
+
+    .contacts_info .branches a
+    {
+        font-size: var(--font_size);
+
+        padding: 11px 31px;
+    }
+
+
+    .contacts_info #map
+    {
+        width: 700px;
+        height: 400px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer
+    {
+        padding: 48px 0 24px;
+    }
+
+
+    footer .menu
+    {
+        width: 720px;
+    }
+
+
+    footer .contacts .phone
+    {
+        font-size: 20px;
+    }
+
+
+    footer .contacts .messengers
+    {
+        gap: 16px;
+    }
+
+
+    footer .contacts .messengers img
+    {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    footer .contacts .time
+    {
+        font-size: 18px;
+
+        gap: 10px;
+    }
+
+
+    footer .callback_btn
+    {
+        height: 48px;
+        padding: 0 31px;
+    }
+
+
+    footer .line
+    {
+        margin-top: 32px;
+    }
+}

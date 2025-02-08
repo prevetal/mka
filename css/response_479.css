@@ -3,14 +3,500 @@
     /*-------------------
         Global styles
     -------------------*/
+    .cont
+    {
+        padding: 0 20px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        padding: 16px 20px;
+    }
+
+
+    .accordion_item .head .title
+    {
+        font-size: 17px;
+
+        padding-right: 40px;
+    }
+
+
+    .accordion_item .head .desc
+    {
+        line-height: calc(100% + 6px);
+    }
+
+
+    .accordion_item .head .arr
+    {
+        top: 21px;
+        right: 22px;
+    }
+
+
+    .accordion_item .data
+    {
+        padding: 0 20px 40px;
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination .limit
+    {
+        width: 100%;
+    }
+
+
+    .pagination .links a.prev,
+    .pagination .links a.next
+    {
+        display: none;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header .menu_item .sub_menu,
+    header .menu_item:hover .sub_menu
+    {
+        width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
+
+
+    /*-----------------
+        Mob. header
+    -----------------*/
+    .mob_header .logo
+    {
+        font-size: 11px;
+    }
+
+
+    .mob_header .logo img
+    {
+        width: 76px;
+        height: 76px;
+        margin-right: 2px;
+    }
+
+
+    .mob_header .mob_menu_btn
+    {
+        margin-left: 16px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block ol li
+    {
+        padding-left: 24px;
+    }
+
+
+    .text_block .download_link
+    {
+        font-size: 12px;
+
+        margin: -2px 4px;
+    }
+
+
+    .text_block .message
+    {
+        padding: 20px;
+    }
+
+
+    .text_block .image img.stamp
+    {
+        bottom: -60px;
+    }
+
+
+    .text_block ul.columns
+    {
+        column-gap: 0;
+        column-count: 1;
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section .cont
+    {
+        min-height: 524px;
+        padding-top: 132px;
+    }
+
+
+    .first_section .pre_title
+    {
+        font-size: 15px;
+    }
+
+
+    .first_section .title
+    {
+        font-size: 30px;
+    }
+
+
+    .first_section .sub_title
+    {
+        font-size: 16px;
+    }
+
+
+    .first_section .action
+    {
+        width: 260px;
+        margin-top: 40px;
+    }
+
+
+    .first_section .phone .label
+    {
+        font-size: 14px;
+    }
+
+
+    .first_section .photo
+    {
+        right: -24px;
+
+        width: 260px;
+    }
+
+
+
+    /*------------------
+        Free consult
+    ------------------*/
+    .free_consult .head
+    {
+        padding: 20px;
+    }
+
+
+    .free_consult .head .title
+    {
+        font-size: 17px;
+    }
+
+
+    .free_consult .contacts
+    {
+        padding: 19px;
+    }
+
+
+    .free_consult .contacts .title
+    {
+        font-size: 20px;
+    }
+
+
+    .free_consult .contacts .label
+    {
+        font-size: 14px;
+    }
+
+
+    .free_consult .contacts .messengers
+    {
+        gap: 12px;
+    }
+
+
+    .free_consult .contacts .messengers img
+    {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .free_consult .contacts .phone
+    {
+        font-size: 20px;
+
+        margin-left: 12px;
+    }
+
+
+    .free_consult .contacts .bg
+    {
+        width: 60px;
+    }
+
+
+    .free_consult .now .title
+    {
+        font-size: 20px;
+    }
+
+
+    .free_consult .now .img
+    {
+        width: 200px;
+    }
+
+
+    .free_consult > .bg
+    {
+        height: 560px;
+    }
 
 
 
     /*--------------
-        Fancybox
+        Problems
     --------------*/
-    .fancybox__slide
+    .problems .row > *
+    {
+        width: 100%;
+    }
+
+
+    .problems .item
     {
         padding: 16px;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .review .image
+    {
+        width: 108px;
+        height: 150px;
+    }
+
+
+    .reviews .review .author
+    {
+        min-height: 150px;
+        padding-left: 128px;
+    }
+
+
+
+    /*----------------
+        Work order
+    ----------------*/
+    .work_order
+    {
+        padding-top: 28px;
+    }
+
+
+    .work_order .item .icon + *
+    {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+
+
+    /*---------------
+        Vacancies
+    ---------------*/
+    .vacancies
+    {
+        padding-top: 28px;
+    }
+
+
+    .vacancies .section .title
+    {
+        font-size: 17px;
+    }
+
+
+    .vacancies .contacts
+    {
+        font-size: 15px;
+
+        margin-top: 24px;
+    }
+
+
+    .vacancies .contacts a.phone_link
+    {
+        font-size: 19px;
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages .item .icon + *
+    {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+
+
+    /*----------------
+        Price list
+    ----------------*/
+    .price_list
+    {
+        padding-top: 28px;
+    }
+
+
+    .price_list .section
+    {
+        margin-top: 40px;
+    }
+
+
+    .price_list .section .sub_title
+    {
+        font-size: 17px;
+    }
+
+
+
+    /*-------------
+        Lawyers
+    -------------*/
+    .lawyers
+    {
+        padding-top: 28px;
+    }
+
+
+    .lawyers .person .photo + *
+    {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+
+
+    /*------------------
+        For partners
+    ------------------*/
+    .for_partners
+    {
+        padding-top: 28px;
+    }
+
+
+    .for_partners .list
+    {
+        gap: 20px;
+    }
+
+
+    .for_partners .item
+    {
+        padding: 20px;
+    }
+
+
+
+    /*------------------------
+        Advantages college
+    ------------------------*/
+    .advantages_college
+    {
+        padding-top: 28px;
+    }
+
+
+    .advantages_college .item
+    {
+        padding: 20px;
+    }
+
+
+    .advantages_college .item .icon
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .advantages_college .item .icon img
+    {
+        width: 40px;
+        height: 40px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info #map
+    {
+        width: calc(100% + 40px);
+        max-width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info
+    {
+        padding-top: 28px;
+    }
+
+
+    .about_info .list
+    {
+        gap: 20px;
+    }
+
+
+    .about_info .item
+    {
+        padding: 20px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .menu
+    {
+        column-count: 2;
+    }
+
+
+    footer .callback_btn
+    {
+        height: 44px;
+        padding: 0 19px;
     }
 }

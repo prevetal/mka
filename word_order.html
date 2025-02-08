@@ -26,13 +26,13 @@
 		<!-- Connecting style files -->
 		<link rel="preload" href="css/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
 		<link rel="preload" href="css/swiper.css" as="style" onload="this.rel='stylesheet'">
-		<link rel="preload" href="css/fancybox.css" as="style" onload="this.rel='stylesheet'">
 		<link rel="preload" href="css/styles.css" as="style" onload="this.rel='stylesheet'">
 
-		<link rel="stylesheet" href="css/response_1279.css" media="print, (max-width: 1279px)">
-		<link rel="stylesheet" href="css/response_1023.css" media="print, (max-width: 1023px)">
-		<link rel="stylesheet" href="css/response_767.css" media="print, (max-width: 767px)">
-		<link rel="stylesheet" href="css/response_479.css" media="(max-width: 479px)">
+		<link rel="preload" href="css/response_1439.css" media="print, (max-width: 1439px)" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="css/response_1279.css" media="print, (max-width: 1279px)" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="css/response_1023.css" media="print, (max-width: 1023px)" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="css/response_767.css" media="print, (max-width: 767px)" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="css/response_479.css" media="(max-width: 479px)" as="style" onload="this.rel='stylesheet'">
 	</head>
 
 	<body>
@@ -155,8 +155,20 @@
 
 				<section class="mob_header">
 					<div class="cont row">
-						<div class="logo">
+						<a href="/" class="logo">
 							<img src="images/logo.svg" alt="">
+							<span>МКА "Межрегиональная<br> Адвокатская Служба"</span>
+						</a>
+
+						<div class="langs modal_cont">
+							<button class="btn mini_modal_btn" data-modal-id="#langs_modal">
+								<span>Ру</span>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+							</button>
+
+							<div class="mini_modal" id="langs_modal">
+
+							</div>
 						</div>
 
 						<button class="mob_menu_btn">
@@ -391,8 +403,17 @@
 		<script src="js/jquery-3.6.3.min.js"></script>
 		<script src="js/functions.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
-		<script src="js/fancybox.js"></script>
 		<script src="js/imask.js"></script>
+		<script src="js/nice-select2.js"></script>
 		<script src="js/scripts.js"></script>
+
+		<!-- Яндекс карты -->
+		<script src="http://api-maps.yandex.ru/2.1.75/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				// Map
+				initMap()
+			})
+		</script>
 	</body>
 </html>
