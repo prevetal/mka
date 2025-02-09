@@ -77,8 +77,15 @@
     header .callback_btn
     {
         height: 44px;
+        margin-left: 40px;
     }
 
+
+
+    header .messengers
+    {
+        margin-left: 40px;
+    }
 
 
     header .messengers .phone

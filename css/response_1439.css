@@ -107,9 +107,16 @@
         line-height: calc(100% + 4px);
 
         height: 48px;
+        margin-left: 112px;
         padding: 0 19px;
     }
 
+
+
+    header .messengers
+    {
+        margin-left: 112px;
+    }
 
 
     header .messengers .phone

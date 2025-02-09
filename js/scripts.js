@@ -95,6 +95,32 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 
 
+	// Fancybox
+	Fancybox.defaults.autoFocus = false
+	Fancybox.defaults.trapFocus = false
+	Fancybox.defaults.dragToClose = false
+	Fancybox.defaults.placeFocusBack = false
+	Fancybox.defaults.l10n = {
+		CLOSE: 'Закрыть',
+		NEXT: 'Следующий',
+		PREV: 'Предыдущий',
+		MODAL: 'Вы можете закрыть это модальное окно нажав клавишу ESC'
+	}
+
+
+	// Modals
+	$('.modal_btn').click(function(e) {
+		e.preventDefault()
+
+		Fancybox.close()
+
+		Fancybox.show([{
+			src: document.getElementById(e.target.getAttribute('data-modal')),
+			type: 'inline'
+		}])
+	})
+
+
 	// Phone input mask
 	const phoneInputs = document.querySelectorAll('input[type=tel]')
 
@@ -154,6 +180,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+window.addEventListener('load', function () {
+	// Fix. header
+	headerInit = true,
+	headerHeight = $('header').outerHeight()
+
+	$('header:not(.absolute)').wrap('<div class="header_wrap"></div>')
+	$('.header_wrap').height(headerHeight)
+
+	headerInit && $(window).scrollTop() > 0
+		? $('header').addClass('fixed')
+		: $('header').removeClass('fixed')
+
+
+	// Fix. mob. header
+	mobHeaderInit = true,
+	mobHeaderHeight = $('header').outerHeight()
+
+	$('.mob_header:not(.absolute)').wrap('<div class="mob_header_wrap"></div>')
+	$('.mob_header_wrap').height(mobHeaderHeight)
+
+	mobHeaderInit && $(window).scrollTop() > 0
+		? $('.mob_header').addClass('fixed')
+		: $('.mob_header').removeClass('fixed')
+})
+
+
+
+window.addEventListener('scroll', function () {
+	// Fix. header
+	typeof headerInit !== 'undefined' && headerInit && $(window).scrollTop() > 0
+		? $('header').addClass('fixed')
+		: $('header').removeClass('fixed')
+
+
+	// Fix. mob. header
+	typeof mobHeaderInit !== 'undefined' && mobHeaderInit && $(window).scrollTop() > 0
+		? $('.mob_header').addClass('fixed')
+		: $('.mob_header').removeClass('fixed')
+})
+
+
+
 window.addEventListener('resize', function () {
 	WH = window.innerHeight || document.clientHeight || BODY.clientHeight
 
@@ -162,6 +230,38 @@ window.addEventListener('resize', function () {
 	if (typeof WW !== 'undefined' && WW != windowW) {
 		// Overwrite window width
 		WW = window.innerWidth || document.clientWidth || BODY.clientWidth
+
+
+		// Fix. header
+		headerInit = false
+		$('.header_wrap').height('auto')
+
+		setTimeout(() => {
+			headerInit = true
+			headerHeight = $('header').outerHeight()
+
+			$('.header_wrap').height(headerHeight)
+
+			headerInit && $(window).scrollTop() > 0
+				? $('header').addClass('fixed')
+				: $('header').removeClass('fixed')
+		}, 100)
+
+
+		// Fix. mob. header
+		mobHeaderInit = false
+		$('.mob_header_wrap').height('auto')
+
+		setTimeout(() => {
+			mobHeaderInit = true
+			mobHeaderHeight = $('.mob_header').outerHeight()
+
+			$('.mob_header_wrap').height(mobHeaderHeight)
+
+			mobHeaderInit && $(window).scrollTop() > 0
+				? $('.mob_header').addClass('fixed')
+				: $('.mob_header').removeClass('fixed')
+		}, 100)
 
 
 		// Mob. version
