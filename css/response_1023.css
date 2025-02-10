@@ -25,6 +25,12 @@
     /*------------
         Header
     ------------*/
+    .header_wrap
+    {
+        height: 0 !important;
+    }
+
+
     header,
     header.absolute,
     header.fixed

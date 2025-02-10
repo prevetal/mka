@@ -194,15 +194,17 @@ window.addEventListener('load', function () {
 
 
 	// Fix. mob. header
-	mobHeaderInit = true,
-	mobHeaderHeight = $('header').outerHeight()
+	if (WW < 1024) {
+		mobHeaderInit = true,
+		mobHeaderHeight = $('.mob_header').outerHeight()
 
-	$('.mob_header:not(.absolute)').wrap('<div class="mob_header_wrap"></div>')
-	$('.mob_header_wrap').height(mobHeaderHeight)
+		$('.mob_header:not(.absolute)').wrap('<div class="mob_header_wrap"></div>')
+		$('.mob_header_wrap').height(mobHeaderHeight)
 
-	mobHeaderInit && $(window).scrollTop() > 0
-		? $('.mob_header').addClass('fixed')
-		: $('.mob_header').removeClass('fixed')
+		mobHeaderInit && $(window).scrollTop() > 0
+			? $('.mob_header').addClass('fixed')
+			: $('.mob_header').removeClass('fixed')
+	}
 })
 
 
@@ -215,9 +217,11 @@ window.addEventListener('scroll', function () {
 
 
 	// Fix. mob. header
-	typeof mobHeaderInit !== 'undefined' && mobHeaderInit && $(window).scrollTop() > 0
-		? $('.mob_header').addClass('fixed')
-		: $('.mob_header').removeClass('fixed')
+	if (WW < 1024) {
+		typeof mobHeaderInit !== 'undefined' && mobHeaderInit && $(window).scrollTop() > 0
+			? $('.mob_header').addClass('fixed')
+			: $('.mob_header').removeClass('fixed')
+	}
 })
 
 
@@ -249,19 +253,21 @@ window.addEventListener('resize', function () {
 
 
 		// Fix. mob. header
-		mobHeaderInit = false
-		$('.mob_header_wrap').height('auto')
+		if (WW < 1024) {
+			mobHeaderInit = false
+			$('.mob_header_wrap').height('auto')
 
-		setTimeout(() => {
-			mobHeaderInit = true
-			mobHeaderHeight = $('.mob_header').outerHeight()
+			setTimeout(() => {
+				mobHeaderInit = true
+				mobHeaderHeight = $('.mob_header').outerHeight()
 
-			$('.mob_header_wrap').height(mobHeaderHeight)
+				$('.mob_header_wrap').height(mobHeaderHeight)
 
-			mobHeaderInit && $(window).scrollTop() > 0
-				? $('.mob_header').addClass('fixed')
-				: $('.mob_header').removeClass('fixed')
-		}, 100)
+				mobHeaderInit && $(window).scrollTop() > 0
+					? $('.mob_header').addClass('fixed')
+					: $('.mob_header').removeClass('fixed')
+			}, 100)
+		}
 
 
 		// Mob. version
